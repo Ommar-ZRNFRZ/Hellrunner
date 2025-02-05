@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://csjboipuf68wx"]
+
+[ext_resource type="Script" path="res://Scenes/level_menu.gd" id="1_ajwg4"]
+
+[node name="ChooseLevel" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ajwg4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_left = 497.0
+offset_right = 733.0
+offset_bottom = 101.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Low" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Low"
+
+[node name="Intermediate" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Intermediate"
+
+[node name="Expert" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Expert"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Low" to="." method="_on_low_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Intermediate" to="." method="_on_intermediate_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Expert" to="." method="_on_expert_pressed"]
