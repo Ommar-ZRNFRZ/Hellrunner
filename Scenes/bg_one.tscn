@@ -1,3 +1,75 @@
-[gd_scene format=3 uid="uid://b67km3155m6yq"]
+[gd_scene load_steps=5 format=3 uid="uid://b67km3155m6yq"]
+
+[ext_resource type="Texture2D" uid="uid://cu0qphmsuo43f" path="res://Assets/Env/mist-forest-background/layers/mist-forest-background-back.png" id="1_susri"]
+[ext_resource type="Texture2D" uid="uid://demp02ils7nef" path="res://Assets/Env/mist-forest-background/layers/mist-forest-background-rocks.png" id="2_6lei7"]
+[ext_resource type="Texture2D" uid="uid://c1w5jpnaoxbl3" path="res://Assets/Env/mist-forest-background/layers/mist-forest-background-back-trees.png" id="3_3ytim"]
+[ext_resource type="Texture2D" uid="uid://bnhjjg33573bx" path="res://Assets/Env/mist-forest-background/layers/mist-forest-background-tree.png" id="4_jktcl"]
 
 [node name="BGOne" type="ParallaxBackground"]
+
+[node name="Sky" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.1, 0)
+
+[node name="Skybackground" type="Sprite2D" parent="Sky"]
+z_index = -1
+position = Vector2(578, 323.5)
+scale = Vector2(2.25, 2.89732)
+texture = ExtResource("1_susri")
+
+[node name="Rocks" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.3, 1)
+
+[node name="Rocksbig" type="Sprite2D" parent="Rocks"]
+z_index = 3
+position = Vector2(218, 394)
+scale = Vector2(2.05288, 1.78571)
+texture = ExtResource("2_6lei7")
+
+[node name="RocksCombine1" type="Sprite2D" parent="Rocks"]
+z_index = 3
+position = Vector2(781, 412)
+scale = Vector2(1.67067, 1.47321)
+texture = ExtResource("2_6lei7")
+flip_h = true
+
+[node name="RocksCombine2" type="Sprite2D" parent="Rocks"]
+z_index = 3
+position = Vector2(1053.06, 415)
+scale = Vector2(0.951322, 1.43304)
+texture = ExtResource("2_6lei7")
+
+[node name="Trees" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 1)
+
+[node name="MoreTrees" type="Sprite2D" parent="Trees"]
+z_index = 2
+position = Vector2(239, 422)
+scale = Vector2(1.8625, 1.92857)
+texture = ExtResource("3_3ytim")
+
+[node name="MoreTrees1" type="Sprite2D" parent="Trees"]
+z_index = 2
+position = Vector2(573, 390)
+scale = Vector2(1.08125, 1.10268)
+texture = ExtResource("3_3ytim")
+
+[node name="MoreTrees2" type="Sprite2D" parent="Trees"]
+z_index = 2
+position = Vector2(1040, 450)
+scale = Vector2(1.475, 1.39732)
+texture = ExtResource("3_3ytim")
+
+[node name="MoreTrees3" type="Sprite2D" parent="Trees"]
+z_index = 2
+position = Vector2(812, 436)
+scale = Vector2(1.8875, 1.89509)
+texture = ExtResource("3_3ytim")
+
+[node name="BigTree" type="ParallaxLayer" parent="."]
+motion_scale = Vector2(0.2, 1)
+
+[node name="BiggerTree" type="Sprite2D" parent="BigTree"]
+z_index = 2
+position = Vector2(310, 256)
+scale = Vector2(2.04464, 2.29018)
+texture = ExtResource("4_jktcl")
