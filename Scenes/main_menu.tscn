@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bcq1ta32u0i1j"]
+[gd_scene load_steps=5 format=3 uid="uid://bcq1ta32u0i1j"]
 
 [ext_resource type="Script" path="res://Scenes/main_menu.gd" id="1_ws04w"]
+[ext_resource type="Texture2D" uid="uid://dk5obnj2porg0" path="res://Assets/button/start.png" id="2_4pqdt"]
+[ext_resource type="Texture2D" uid="uid://c6wwradr3intw" path="res://Assets/button/option.png" id="3_7tfmr"]
+[ext_resource type="Texture2D" uid="uid://dopr0pjum32eq" path="res://Assets/button/quit.png" id="4_fovso"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -20,17 +23,16 @@ offset_bottom = 101.0
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 
-[node name="Play" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "PLAY"
+[node name="Play" type="TouchScreenButton" parent="MarginContainer/VBoxContainer"]
+texture_normal = ExtResource("2_4pqdt")
 
-[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Options"
+[node name="Options" type="TouchScreenButton" parent="MarginContainer/VBoxContainer"]
+position = Vector2(1, 50)
+texture_normal = ExtResource("3_7tfmr")
 
-[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Quit"
+[node name="Quit" type="TouchScreenButton" parent="MarginContainer/VBoxContainer"]
+position = Vector2(2, 97)
+texture_normal = ExtResource("4_fovso")
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
